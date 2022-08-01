@@ -2,7 +2,8 @@ package telran.words.tests;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static telran.words.model.Anagram.isAnagram;
 
 class AnagramTest {
@@ -10,10 +11,14 @@ class AnagramTest {
 
     @Test
     void testIsAnagram() {
-        assertTrue(isAnagram(word,"city"));
-        assertTrue(isAnagram(word,"tray"));
-        assertTrue(isAnagram(word,"city"));
-        assertTrue(isAnagram(word,"tele"));
+
+        System.out.println(isAnagram(word, "cityX11 00 1"));
+
+        assertTrue(isAnagram(word, "city"));
+        assertTrue(isAnagram(word, "cYclE"));
+        assertTrue(isAnagram(word, "city"));
+        assertTrue(isAnagram(word, "tele"));
+        assertTrue(isAnagram(word, "yticirtcele"));
 
         assertFalse(isAnagram(word, "tell"));
         assertFalse(isAnagram(word, "select"));
@@ -21,8 +26,6 @@ class AnagramTest {
         assertFalse(isAnagram(word, "reter"));
         assertFalse(isAnagram(word, ""));
         assertFalse(isAnagram(word, null));
-
-
 
 
     }
